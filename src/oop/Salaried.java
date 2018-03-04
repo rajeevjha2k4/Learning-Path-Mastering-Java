@@ -7,8 +7,13 @@ public class Salaried extends Employee {
 	private double salary = DEFAULT_SALARY;
 	
 	
-
-	public Salaried() {}    
+//if Super class constructor commented then compile Error occurs at below method -  Implicit super constructor Employee() is undefined. 
+//Must explicitly invoke another constructor.
+	public Salaried() {} 
+	
+	public Salaried(String name){
+		this(name,DEFAULT_SALARY);
+	}
 
 	public Salaried(String name, double salary) {
 		super(name);
@@ -32,7 +37,7 @@ public class Salaried extends Employee {
 	@Override
 	public double getPay() {
 		// TODO Auto-generated method stub
-		return 0;
+		return salary/12;
 	}
 
 }
