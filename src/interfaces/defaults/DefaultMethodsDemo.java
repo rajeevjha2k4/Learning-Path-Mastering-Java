@@ -15,7 +15,7 @@ public class DefaultMethodsDemo {
 		//Parameters: 
 		//filter - a predicate which returns true for elements to be removed 
 		//Returns: true if any elements were removed 
-		boolean removed = nums.removeIf(n -> n<= 0);
+		boolean removed = nums.removeIf(rajeev -> rajeev >= 0);
 		System.out.println("ELements were " + (removed ? "NOT" : " ") + " removed");
 		
 		System.out.println(nums);
